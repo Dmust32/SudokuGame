@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+}
+
+.App{
+  display: flex;
+  justify-content: center;
+  justify-items: center
+}
+
+.input-container input{
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+  padding: 0;
+  background-color: pink
+}
+
+.board-container{
+  width: 300px;
+  height: 290px;
+  display: flex;
+  flex-wrap: wrap
+}
+
+.box-container{
+  height: 96px;
+  width: 96px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: aqua;
+  border: 1px solid black
+}
+
+
