@@ -1,32 +1,34 @@
 import React, {Component} from 'react'
+import {connect} from 'react-redux'
 
 class InputSquare extends Component {
     state = {
         squareValue: this.props.squareValue
     }
 
-    updateValue = async (value) => {
+    updateValue = (value) => {
         this.setState({squareValue: value})
-        let row = await this.findRow(this.props.postion)
-        this.props.updateBoard(value, this.props.position)
-
     }
 
 
 
 
     render(){
-        console.log('value', this.state.squareValue)
         return(
             <div className='input-container'>
-                <input 
-                    value = {this.state.squareValue}
-                    onChange = {(e) => this.updateValue(e.target.value)}
-                ></input>
+                <div className='picker-cube' onClick={()=>this.updateValue(this.props.selectedValue)}>
+                    {this.state.squareValue}
+                </div>
                 
             </div>
         )
     }
 }
 
-export default InputSquare
+function mapStateToProps(state){
+    return(
+        state
+    )
+}
+
+export default connect(mapStateToProps, null)(InputSquare)

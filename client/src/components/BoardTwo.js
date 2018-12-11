@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import InputSquare from './InputSquare'
-
+import {connect} from 'react-redux'
 
 class Board extends Component {
     state = {
@@ -84,4 +84,10 @@ class Board extends Component {
     }
 }
 
-export default Board
+function mapStateToProps(state){
+    return(
+        state
+    )
+}
+
+export default connect(mapStateToProps, null)(Board)

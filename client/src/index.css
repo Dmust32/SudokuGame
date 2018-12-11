@@ -38,5 +38,6 @@ body {
   height: 30px;
   border: 1px solid black;
   margin: 3px;
-  background-color: pink
+  background-color: pink;
+  cursor: pointer;
 }
