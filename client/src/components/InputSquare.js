@@ -5,14 +5,18 @@ class InputSquare extends Component {
         squareValue: this.props.squareValue
     }
 
-    updateValue = (value) => {
+    updateValue = async (value) => {
         this.setState({squareValue: value})
+        let row = await this.findRow(this.props.postion)
         this.props.updateBoard(value, this.props.position)
+
     }
 
 
 
+
     render(){
+        console.log('value', this.state.squareValue)
         return(
             <div className='input-container'>
                 <input 

@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import './App.css';
-import Board from './components/Board'
+import BoardTwo from './components/BoardTwo'
+import ValuePicker from './components/ValuePicker'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Board />
+        <BoardTwo />
+        <ValuePicker />
       </div>
     );
   }
